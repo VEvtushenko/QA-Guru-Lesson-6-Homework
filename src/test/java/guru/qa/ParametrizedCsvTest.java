@@ -5,13 +5,11 @@ import com.codeborne.selenide.Selenide;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
-import org.junit.jupiter.params.provider.ValueSource;
 
 import static com.codeborne.selenide.Condition.text;
-import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.$;
 
-public class ParametrTest {
+public class ParametrizedCsvTest {
 
     @BeforeAll
     static void setUp(){
@@ -30,5 +28,4 @@ public class ParametrTest {
         $("#searchButton").click();
         $("#bodyContent").shouldHave(text(projectName));
     }
-
 }
